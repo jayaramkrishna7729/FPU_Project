@@ -1,0 +1,57 @@
+ 
+****************************************
+Report : resolved_strategy
+Design : fpu
+Version: T-2022.03-SP4
+Date   : Sat Dec 21 16:42:03 2024
+****************************************
+
+Attributes that prevent power management cell insertion
+      dt - dont_touch
+      an - analog net
+     pad - pad-port path
+      pg - power/ground pin
+      da - dangling pin
+
+Resolved Isolation strategies: No strategies to report
+
+Resolved Level shifter strategies: No strategies to report
+
+Resolved Repeater strategies: No strategies to report
+
+Resolved Retention strategies: No strategies to report
+Warning: Found 900 pin to pin connections requiring level shifter(s).  (MV-229)
+Warning: Found 126 level shifter library cell(s) that are not in the correct power and ground(PG) pin format. (MV-167)
+
+Non-default variable settings:
+--------------------------------------------------------------------------------
+No non-default variable values to report
+--------------------------------------------------------------------------------
+
+Isolation mapping failures:
+
+Element(s)                                  Strategy   Domain     Clamp Sense Reasons
+--------------------------------------------------------------------------------------------------------------
+Isolation mapping should succeed.
+--------------------------------------------------------------------------------------------------------------
+
+Enable level shifter mapping failures:
+
+Element(s)                                  Strategy   Domain     Clamp Sense Reasons
+--------------------------------------------------------------------------------------------------------------
+Enable level shifter mapping should succeed.
+--------------------------------------------------------------------------------------------------------------
+
+
+
+Level shifter insertion failures:
+
+Index  Path Drivers                                   Reasons
+----------------------------------------------------------------------------------------------------
+
+Level shifter insertion should succeed.
+----------------------------------------------------------------------------------------------------
+
+
+Information: All isolation, enable level shifter and level shifter cells can be mapped. (UPF-908)
+1

@@ -1,0 +1,40 @@
+ 
+****************************************
+Report : supply_net
+Design : fpu
+Version: T-2022.03-SP4
+Date   : Sat Dec 21 16:55:01 2024
+****************************************
+
+------------------------------------------------------------------------------
+
+ Supply Net            : VDD
+ Current Scope         : fpu
+ Operating Voltage     : -- Maximum --    -- Minimum --   
+                            (0.60)           (0.60)
+
+ Supply States         : No supply states defined for the net. 
+ Power Domain          : PD(*)  
+
+------------------------------------------------------------------------------
+
+ Supply Net            : VSS
+ Current Scope         : fpu
+ Operating Voltage     : -- Maximum --    -- Minimum --   
+                            (0.00)           (0.00)
+
+ Supply States         : No supply states defined for the net. 
+ Power Domain          : PD(*)  
+
+------------------------------------------------------------------------------
+
+ Supply Net            : VDDH
+ Current Scope         : fpu
+ Operating Voltage     : -- Maximum --    -- Minimum --   
+                            (0.72)           (0.72)
+
+ Supply States         : No supply states defined for the net. 
+ Power Domain          : PD  
+
+------------------------------------------------------------------------------
+1

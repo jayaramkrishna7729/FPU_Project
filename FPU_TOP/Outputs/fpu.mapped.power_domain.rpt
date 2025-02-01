@@ -1,0 +1,46 @@
+ 
+****************************************
+Report : power_domain
+Design : fpu
+Version: T-2022.03-SP4
+Date   : Sat Dec 21 16:55:01 2024
+****************************************
+
+------------------------------------------------------------------------------
+
+ Power Domain             : fpu_add/PD
+ Current Scope            : fpu
+ Elements                 : fpu_add
+ Available Supply Nets    : VDD, VSS
+ Available Supply Sets    : 
+
+ Connections                -- Power --             -- Ground --
+ Primary:                   fpu_add/VDD             fpu_add/VSS
+   (Max Op. Voltage)         (0.60)                  (0.00)
+
+------------------------------------------------------------------------------
+
+ Power Domain             : PD
+ Current Scope            : fpu
+ Elements                 : <top_level>
+ Available Supply Nets    : VDD, VSS, VDDH
+ Available Supply Sets    : 
+
+ Connections                -- Power --             -- Ground --
+ Primary:                   VDD                     VSS
+   (Max Op. Voltage)         (0.60)                  (0.00)
+
+------------------------------------------------------------------------------
+
+ Power Domain             : fpu_mul/PDm
+ Current Scope            : fpu
+ Elements                 : fpu_mul
+ Available Supply Nets    : VDD, VSS, VDDO
+ Available Supply Sets    : 
+
+ Connections                -- Power --             -- Ground --
+ Primary:                   fpu_mul/VDD             fpu_mul/VSS
+   (Max Op. Voltage)         (0.72)                  (0.00)
+
+------------------------------------------------------------------------------
+1

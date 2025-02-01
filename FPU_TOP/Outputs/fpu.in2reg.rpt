@@ -1,0 +1,86 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -group in2reg
+        -max_paths 1
+Design : fpu
+Version: T-2022.03-SP4
+Date   : Sat Dec 21 16:55:01 2024
+****************************************
+Wire Load Model Mode: top
+
+  Startpoint: global_shift_enable
+              (input port clocked by MAIN)
+  Endpoint: fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/clken_reg
+            (negative level-sensitive latch clocked by MAIN)
+  Path Group: in2reg
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fpu                35000                 saed14rvt_ss0p72v125c
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock MAIN (rise edge)                                  0.00       0.00      
+  clock network delay (ideal)                             0.00       0.00      
+  input external delay                                    0.75       0.75 r    
+  global_shift_enable (in)                                0.00       0.75 r    
+  fpu_rptr_groups/global_shift_enable (fpu_rptr_groups)
+                                                          0.00       0.75 r    
+  fpu_rptr_groups/i_ctu_tst_buf1_lo/in[2] (fpu_bufrpt_grp4_9)
+                                                          0.00       0.75 r    
+  fpu_rptr_groups/i_ctu_tst_buf1_lo/out[2] (fpu_bufrpt_grp4_9)
+                                                          0.00       0.75 r    
+  fpu_rptr_groups/global_shift_enable_buf1 (fpu_rptr_groups)
+                                                          0.00       0.75 r    
+  test_stub/global_shift_enable (test_stub_scan)          0.00       0.75 r    
+  test_stub/se (test_stub_scan)                           0.00       0.75 r    
+  fpu_rptr_groups/se (fpu_rptr_groups)                    0.00       0.75 r    
+  fpu_rptr_groups/i_se_buf1/in[3] (fpu_bufrpt_grp4_7)     0.00       0.75 r    
+  fpu_rptr_groups/i_se_buf1/U1/X (SAEDRVT14_BUF_U_0P5)
+                                                          0.04       0.79 r    0.60
+  fpu_rptr_groups/i_se_buf1/out[3] (fpu_bufrpt_grp4_7)
+                                                          0.00       0.79 r    
+  fpu_rptr_groups/i_se_add_buf2/in[3] (fpu_bufrpt_grp4_6)
+                                                          0.00       0.79 r    
+  fpu_rptr_groups/i_se_add_buf2/out[3] (fpu_bufrpt_grp4_6)
+                                                          0.00       0.79 r    
+  fpu_rptr_groups/se_add_exp_buf2 (fpu_rptr_groups)       0.00       0.79 r    
+  fpu_add/se_add_exp (fpu_add)                            0.00       0.79 r    
+  fpu_add/U2/X (SAEDRVT14_BUF_3)                          0.09       0.88 r    0.60
+  fpu_add/fpu_add_exp_dp/se (fpu_add_exp_dp)              0.00       0.88 r    
+  fpu_add/fpu_add_exp_dp/U32/X (SAEDRVT14_INV_0P5)        0.06       0.93 f    0.60
+  fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/tmb_l (clken_buf_10)
+                                                          0.00       0.93 f    
+  fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/U3/X (SAEDRVT14_ND2_CDC_1)
+                                                          0.02       0.95 r    0.60
+  fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/clken_reg/D (SAEDRVT14_LDNQ_U_0P5)
+                                                          0.01       0.96 r    0.60
+  data arrival time                                                  0.96      
+
+  clock MAIN (fall edge)                                  0.83       0.83      
+  clock network delay (ideal)                             0.00       0.83      
+  fpu_add/fpu_add_exp_dp/ckbuf_add_exp_dp/clken_reg/G (SAEDRVT14_LDNQ_U_0P5)
+                                                          0.00       0.83 f    
+  time borrowed from endpoint                             0.13       0.96      
+  data required time                                                 0.96      
+  ------------------------------------------------------------------------------------
+  data required time                                                 0.96      
+  data arrival time                                                 -0.96      
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                        0.00      
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  MAIN nominal pulse width                                0.83                 
+  library setup time                                     -0.02                 
+  --------------------------------------------------------------
+  max time borrow                                         0.82                 
+  actual time borrow                                      0.13                 
+  --------------------------------------------------------------
+
+
+1
