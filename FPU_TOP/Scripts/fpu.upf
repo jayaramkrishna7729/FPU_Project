@@ -1,0 +1,21 @@
+load_upf ../../fpu_add/scripts/fpu_add.upf -scope fpu_add
+load_upf ../../fpu_mul/scripts/fpu_mul.upf -scope fpu_mul
+
+create_power_domain PD
+
+create_supply_port VDD -domain PD
+create_supply_port VSS -domain PD
+create_supply_port VDDH -domain PD
+
+create_supply_net VDD -domain PD
+create_supply_net VSS -domain PD
+create_supply_net VDDH -domain PD
+
+connect_supply_net VDD -ports {VDD fpu_add/VDD fpu_mul/VDDO}
+connect_supply_net VSS -ports {VSS fpu_add/VSS fpu_mul/VSS}
+connect_supply_net VDDH -ports {VDDH fpu_mul/VDD}
+
+set_domain_supply_net PD -primary_power_net VDD -primary_ground_net VSS
+
+
+
